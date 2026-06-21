@@ -50,7 +50,7 @@ const Contact = () => {
               className="glass-card p-8 md:p-12"
             >
               <form
-                action="https://formspree.io/f/mqakvvoj"
+                action="https://formspree.io/f/xvgopkzw"
                 method="POST"
                 className="space-y-6"
               >
