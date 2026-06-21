@@ -55,6 +55,7 @@ const products = [
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
 
   const filteredProducts = activeCategory === 'All'
     ? products
@@ -110,8 +111,9 @@ const Products = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 className="h-full"
+                onClick={() => setSelectedProduct(product)}
               >
-                <SpotlightCard className="p-8 group transition-all duration-500 relative flex flex-col h-full border-white/5 hover:border-accent-blue/30">
+                <SpotlightCard className="p-8 group transition-all duration-500 relative flex flex-col h-full border-white/5 hover:border-accent-blue/30 cursor-pointer">
                   <div className="flex justify-between items-start mb-6">
                     <div className="p-4 bg-white/5 w-fit rounded-2xl group-hover:scale-110 group-hover:bg-white/10 transition-all duration-300">
                       {product.icon}
@@ -143,6 +145,73 @@ const Products = () => {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Detail Modal */}
+        <AnimatePresence>
+          {selectedProduct && (
+            <div className="fixed inset-0 z-[150] flex items-center justify-center p-4">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setSelectedProduct(null)}
+                className="absolute inset-0 bg-primary/80 backdrop-blur-md"
+              />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                className="relative w-full max-w-2xl glass-card p-8 md:p-12 overflow-hidden"
+              >
+                <button
+                  onClick={() => setSelectedProduct(null)}
+                  className="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors"
+                >
+                  <ArrowUpRight size={24} className="rotate-45" />
+                </button>
+
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="p-4 bg-white/5 rounded-2xl">
+                    {selectedProduct.icon}
+                  </div>
+                  <div>
+                    <span className="text-accent-blue text-xs font-bold uppercase tracking-widest mb-2 block">
+                      {selectedProduct.category}
+                    </span>
+                    <h4 className="text-3xl md:text-4xl font-bold text-white">{selectedProduct.title}</h4>
+                  </div>
+                </div>
+
+                <p className="text-slate-300 text-lg leading-relaxed mb-8">
+                  {selectedProduct.description}
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-12">
+                  <div className="space-y-4">
+                    <h5 className="font-bold text-white uppercase text-sm tracking-widest">Key Features</h5>
+                    {selectedProduct.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-3 text-slate-400">
+                        <div className="w-2 h-2 rounded-full bg-accent-blue" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                    <h5 className="font-bold text-white mb-2">Impact Goal</h5>
+                    <p className="text-sm text-slate-400">
+                      Designed to drive digital transformation and financial inclusion across Tanzania.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="btn-primary flex-1 py-4">Launch Platform</button>
+                  <button onClick={() => setSelectedProduct(null)} className="btn-secondary flex-1 py-4">Close Details</button>
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );
