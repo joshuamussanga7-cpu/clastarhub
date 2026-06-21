@@ -1,56 +1,3 @@
-import { motion } from 'framer-motion';
-import {
-  Smartphone, Globe, Code, Palette,
-  Landmark, GraduationCap, Wallet, ShieldCheck,
-  ArrowRight
-} from 'lucide-react';
-
-const technologyServices = [
-  {
-    title: 'Mobile App Development',
-    description: 'Developing high-performance, native and cross-platform mobile applications for Android and iOS.',
-    icon: <Smartphone className="text-accent-blue" />,
-  },
-  {
-    title: 'Website Creation',
-    description: 'Crafting responsive, secure, and scalable websites using modern technologies like React and Next.js.',
-    icon: <Globe className="text-accent-cyan" />,
-  },
-  {
-    title: 'Software Engineering',
-    description: 'Providing robust enterprise-grade software solutions tailored to solve complex business challenges.',
-    icon: <Code className="text-accent-green" />,
-  },
-  {
-    title: 'UI/UX Design',
-    description: 'Designing intuitive and visually stunning user interfaces that prioritize user experience.',
-    icon: <Palette className="text-purple-500" />,
-  }
-];
-
-const microfinanceServices = [
-  {
-    title: 'Student Tuition Loans',
-    description: 'Providing simple interest loans specifically designed to help university students cover their tuition fees.',
-    icon: <GraduationCap className="text-accent-green" />,
-  },
-  {
-    title: 'Simple Interest Credit',
-    description: 'Transparent and affordable financial support with no hidden charges for the academic community.',
-    icon: <Landmark className="text-accent-blue" />,
-  },
-  {
-    title: 'Digital Onboarding',
-    description: 'A fast and secure digital application process, allowing students to apply for funds from anywhere.',
-    icon: <Wallet className="text-accent-cyan" />,
-  },
-  {
-    title: 'Financial Inclusion',
-    description: 'Ensuring that financial constraints do not hinder the educational journey of students in Tanzania.',
-    icon: <ShieldCheck className="text-orange-500" />,
-  }
-];
-
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -294,7 +241,5 @@ const Services = () => {
     </section>
   );
 };
-
-export default Services;
 
 export default Services;
