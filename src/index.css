@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0F172A] text-slate-200 overflow-x-hidden selection:bg-accent-blue/30;
+  }
+
+  /* Premium Noise Overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    z-index: 9999;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3e%3cfilter id='noiseFilter'%3e%3cfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3e%3c/filter%3e%3crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3e%3c/svg%3e");
+  }
+}
+
+/* Global Animated Background Mesh */
+.bg-mesh {
+  background:
+    radial-gradient(at 0% 0%, hsla(215, 27%, 16%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(217, 91%, 60%, 0.15) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(188, 91%, 43%, 0.15) 0, transparent 50%);
+}
+
+.bg-grid-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.bg-grid-3d::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image:
+    linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: rotateX(60deg) translateY(0);
+  animation: grid-move 20s linear infinite;
+  mask-image: linear-gradient(to bottom, transparent, black, transparent);
+}
+
+@keyframes grid-move {
+  0% { transform: rotateX(60deg) translateY(0); }
+  100% { transform: rotateX(60deg) translateY(60px); }
+}
+
+/* Enhanced Glass Cards with Spotlight Effect */
+.glass-card {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl transition-all duration-500 overflow-hidden relative;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 130, 246, 0.1), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+.glass-card:hover {
+  @apply border-accent-blue/40 bg-white/[0.08] shadow-[0_0_50px_rgba(59,130,246,0.15)];
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-blue via-accent-cyan to-accent-green;
+  background-size: 200% auto;
+  animation: gradient-x 5s linear infinite;
+}
+
+/* Bouncing & Floating Utilities */
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float 8s ease-in-out infinite; }
+.animate-float-delayed { animation: float 6s ease-in-out 2s infinite; }
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-25px) rotate(3deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); filter: blur(40px); }
+  50% { opacity: 0.8; transform: scale(1.1); filter: blur(60px); }
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced Buttons */
+.btn-primary {
+  @apply relative px-8 py-4 bg-accent-blue hover:bg-blue-600 text-white rounded-full font-bold transition-all duration-500 shadow-lg shadow-accent-blue/20 hover:shadow-accent-blue/50 hover:-translate-y-1 active:scale-95 overflow-hidden;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-full font-bold transition-all duration-500 border border-white/10 backdrop-blur-sm hover:-translate-y-1 active:scale-95;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-primary; }
+::-webkit-scrollbar-thumb { @apply bg-white/20 rounded-full hover:bg-accent-blue/50 transition-colors; }
+
+.mouse-scroll {
+  @apply w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1;
+}
+
+.mouse-scroll .wheel {
+  @apply w-1 h-2 bg-white/50 rounded-full animate-bounce;
+}
