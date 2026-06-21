@@ -16,18 +16,35 @@ const AIChatbot = () => {
     setMessages(newMessages);
     setInput('');
 
-    // Mock AI Response
+    // Enhanced AI Response Logic
     setTimeout(() => {
-      let response = "That's a great question! Clastar Hub, based in Dodoma, is focused on bridging the gap between technology and accessibility across Tanzania and Africa. Would you like to learn more about our FinTech or EdTech solutions?";
-      if (input.toLowerCase().includes('product')) {
-        response = "Our ecosystem includes: University Notes (with Six AI), Uni Connect, Savi Finance, Math Challenge (IQ Booster), and Clastar Microfinance. Which one interests you?";
-      } else if (input.toLowerCase().includes('location') || input.toLowerCase().includes('where')) {
-        response = "We are proudly headquartered in Dodoma, Tanzania!";
-      } else if (input.toLowerCase().includes('service') || input.toLowerCase().includes('create')) {
-        response = "We specialize in professional App Creation and Website Creation tailored for modern businesses. Would you like to discuss a project?";
+      const q = input.toLowerCase();
+      let response = "That's an interesting question! As Clastar AI, I can tell you that we are committed to digital transformation in Tanzania. Would you like to know more about our Technologies branch or Microfinance loans?";
+
+      if (q.includes('loan') || q.includes('finance') || q.includes('money') || q.includes('tuition')) {
+        response = "Clastar Microfinance provides accessible tuition loans for university students in Tanzania with simple interest. You can apply directly through our platform once you have your admission details. Would you like to know the requirements?";
+      } else if (q.includes('requirement') || q.includes('apply') || q.includes('how to')) {
+        response = "To apply for a Clastar Microfinance loan, you typically need: 1. A valid Student ID/Admission letter, 2. A guarantor, and 3. Your basic national ID details. The process is fully digital!";
+      } else if (q.includes('tech') || q.includes('software') || q.includes('website') || q.includes('app')) {
+        response = "Clastar Technologies is our digital powerhouse! We build high-performance mobile apps (Android/iOS), professional websites, and custom enterprise software. We even do UI/UX design and branding. Do you have a project in mind?";
+      } else if (q.includes('product') || q.includes('apps you made')) {
+        response = "We've built an incredible ecosystem: \n• University Notes (with Six AI) \n• Uni Connect (Student networking) \n• Savi Finance (Personal finance) \n• Math Challenge (IQ Booster). \nWhich one should I explain first?";
+      } else if (q.includes('university notes') || q.includes('six ai')) {
+        response = "University Notes is our flagship EdTech app. It uses 'Six AI' to help students summarize long lectures and generate study quizzes automatically. It's a game-changer for Tanzanian students!";
+      } else if (q.includes('location') || q.includes('where') || q.includes('office') || q.includes('dodoma')) {
+        response = "Our headquarters are located in the heart of Dodoma, Tanzania. We are the central hub for innovation in the capital!";
+      } else if (q.includes('contact') || q.includes('phone') || q.includes('email') || q.includes('call')) {
+        response = "You can reach us at +255 657 811 904 or email info@clastarhub.com. You can also use the contact form on this page to send us a direct message!";
+      } else if (q.includes('who are you') || q.includes('what is clastar')) {
+        response = "Clastar Investment Hub is a dual-branch company based in Dodoma. We bridge the gap between Technology (Software & IT) and Finance (Student Loans) to empower the next generation.";
+      } else if (q.includes('hello') || q.includes('hi') || q.includes('hey')) {
+        response = "Hello! I'm Clastar AI. I can help you with information about our software services, student loans, or our digital products. How can I assist you today?";
+      } else if (q.includes('thanks') || q.includes('thank you')) {
+        response = "You're very welcome! Is there anything else Clastar AI can help you with today?";
       }
+
       setMessages([...newMessages, { role: 'assistant', content: response }]);
-    }, 1000);
+    }, 800);
   };
 
   return (

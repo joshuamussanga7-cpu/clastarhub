@@ -49,12 +49,18 @@ const Contact = () => {
               viewport={{ once: true }}
               className="glass-card p-8 md:p-12"
             >
-              <form className="space-y-6">
+              <form
+                action="https://formspree.io/f/mqakvvoj"
+                method="POST"
+                className="space-y-6"
+              >
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-300 ml-1">Full Name</label>
                     <input
+                      name="name"
                       type="text"
+                      required
                       placeholder="John Doe"
                       className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-accent-blue transition-colors text-white"
                     />
@@ -62,7 +68,9 @@ const Contact = () => {
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-300 ml-1">Email Address</label>
                     <input
+                      name="email"
                       type="email"
+                      required
                       placeholder="john@example.com"
                       className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-accent-blue transition-colors text-white"
                     />
@@ -70,7 +78,10 @@ const Contact = () => {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-300 ml-1">Department</label>
-                  <select className="w-full px-6 py-4 bg-[#121826] border border-white/10 rounded-xl focus:outline-none focus:border-accent-blue transition-colors text-white">
+                  <select
+                    name="department"
+                    className="w-full px-6 py-4 bg-[#121826] border border-white/10 rounded-xl focus:outline-none focus:border-accent-blue transition-colors text-white"
+                  >
                     <option>Clastar Technologies</option>
                     <option>Clastar Microfinance</option>
                     <option>General Inquiry</option>
@@ -79,12 +90,14 @@ const Contact = () => {
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-300 ml-1">Message</label>
                   <textarea
+                    name="message"
+                    required
                     rows={6}
                     placeholder="How can we assist you today?"
                     className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-accent-blue transition-colors text-white resize-none"
                   ></textarea>
                 </div>
-                <button className="btn-primary w-full flex items-center justify-center gap-2 py-4 text-lg">
+                <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2 py-4 text-lg">
                   Send Message <Send size={20} />
                 </button>
               </form>
