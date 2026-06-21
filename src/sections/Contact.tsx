@@ -7,19 +7,19 @@ const Contact = () => {
       title: 'Technical Support',
       description: 'Need help with Clastar Technologies services?',
       icon: <Headphones className="text-accent-blue" />,
-      email: 'support@clastarhub.com',
+      email: 'joshuamussanga7@gmail.com',
     },
     {
       title: 'Microfinance Help',
       description: 'Questions about student loans and applications?',
       icon: <GraduationCap className="text-accent-green" />,
-      email: 'finance@clastarhub.com',
+      email: 'joshuamussanga7@gmail.com',
     },
     {
       title: 'General Inquiries',
       description: 'General questions about Clastar Investment Hub.',
       icon: <MessageSquare className="text-accent-cyan" />,
-      email: 'info@clastarhub.com',
+      email: 'joshuamussanga7@gmail.com',
     },
   ];
 
@@ -50,7 +50,7 @@ const Contact = () => {
               className="glass-card p-8 md:p-12"
             >
               <form
-                action="https://formspree.io/f/xvgopkzw"
+                action="https://formspree.io/joshuamussanga7@gmail.com"
                 method="POST"
                 className="space-y-6"
               >
