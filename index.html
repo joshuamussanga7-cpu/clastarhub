@@ -32,6 +32,42 @@
         scrollbar-width: none;
       }
     </style>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CLASTAR INVESTMENT HUB",
+        "url": "https://clastarhub.com",
+        "logo": "https://clastarhub.com/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+255657811904",
+          "contactType": "customer service",
+          "areaServed": "TZ",
+          "availableLanguage": "English"
+        },
+        "description": "Empowering Tanzania's future through technology and student microfinance.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dodoma",
+          "addressCountry": "TZ"
+        },
+        "hasPart": [
+          {
+            "@type": "Organization",
+            "name": "Clastar Technologies",
+            "description": "Digital solutions, software development, and graphic design."
+          },
+          {
+            "@type": "Organization",
+            "name": "Clastar Microfinance",
+            "description": "Financial support and loans for students in Tanzania."
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="bg-[#0F172A] text-slate-200 antialiased selection:bg-accent-blue/30 selection:text-white overflow-x-hidden">
     <div id="root"></div>
