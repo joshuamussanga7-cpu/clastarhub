@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight, Bot, Cloud, Code2, Cpu, Globe2, Layers3, Menu, Smartphone, Sparkles, X, Zap } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import ScrollProgress from './components/ScrollProgress';
@@ -19,7 +20,7 @@ const work = [
   ['Furniture Center', 'Commerce website', '#'], ['Flower Printer', 'Business website', '#'], ['Mr Furniture', 'Business website', '#'],
 ];
 
-const capabilities = [
+const capabilities: Array<[LucideIcon, string, string]> = [
   [Bot, 'AI & Intelligent Systems', 'AI assistants, automation, agents and intelligent product experiences.'],
   [Code2, 'Web Platforms', 'High-performance websites and scalable digital products built for real users.'],
   [Smartphone, 'Mobile Applications', 'Android-first products and mobile experiences designed for everyday use.'],
