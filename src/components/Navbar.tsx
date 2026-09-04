@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import './navbar.css';
 
 const Navbar = () => {
   const links = [
