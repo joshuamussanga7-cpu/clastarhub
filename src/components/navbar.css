@@ -1,0 +1,9 @@
+.glass-nav { position: fixed; inset: 0 0 auto; z-index: 60; height: 76px; border-bottom: 1px solid rgba(255,255,255,.07); background: rgba(5,5,5,.58); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); }
+.nav-inner { width: min(1240px, calc(100% - 48px)); height: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; border: 0; background: none; color: #eee; cursor: pointer; font-weight: 850; letter-spacing: .08em; font-size: 13px; }
+.brand-symbol { width: 32px; height: 32px; border: 1px solid rgba(245,158,11,.45); border-radius: 10px; display: grid; place-items: center; color: #f59e0b; background: rgba(245,158,11,.06); box-shadow: 0 0 30px rgba(245,158,11,.08); }
+.brand-accent { color: #f59e0b; margin-left: 4px; }
+.nav-links { display: flex; align-items: center; gap: 8px; }
+.nav-links button { border: 0; background: none; color: #777; padding: 9px 13px; font-size: 12px; font-weight: 650; cursor: pointer; transition: color .25s; }.nav-links button:hover { color: #fff; }
+.nav-contact { display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,.12); border-radius: 999px; padding: 9px 14px; background: rgba(255,255,255,.04); color: #eee; font-size: 11px; font-weight: 750; cursor: pointer; transition: .25s; }.nav-contact:hover { border-color: rgba(245,158,11,.4); color: #f59e0b; }
+@media (max-width: 900px) { .glass-nav { height: 66px; }.nav-inner { width: calc(100% - 32px); }.nav-links, .nav-contact { display: none; }.brand { font-size: 12px; } }
