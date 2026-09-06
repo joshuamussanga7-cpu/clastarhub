@@ -1,0 +1,73 @@
+:root{--ch-ink:#17120f;--ch-paper:#faf7f3;--ch-orange:#f97316;--ch-orange-hot:#fb923c;--ch-night:#090807;--ch-night-card:#15100d}
+
+/* ClastarHub 2026 immersive layer: one brand, distinct project worlds. */
+.clastar-site{--pointer-x:50vw;--pointer-y:40vh;background:var(--ch-paper);color:var(--ch-ink)}
+.clastar-site:before{content:"";position:fixed;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(22rem circle at var(--pointer-x) var(--pointer-y),rgba(249,115,22,.10),transparent 68%);mix-blend-mode:multiply;opacity:.9;transition:background .18s ease}
+.clastar-site main{position:relative;z-index:2}
+
+/* Atmospheric bubble constellation */
+.clastar-site .hero-section:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:radial-gradient(circle at 16% 30%,rgba(249,115,22,.14) 0 3px,transparent 4px),radial-gradient(circle at 78% 20%,rgba(249,115,22,.16) 0 5px,transparent 6px),radial-gradient(circle at 64% 76%,rgba(249,115,22,.12) 0 3px,transparent 4px);background-size:210px 180px,320px 260px,280px 220px;animation:chParticleFloat 22s linear infinite}
+@keyframes chParticleFloat{0%{background-position:0 0,0 0,0 0}50%{background-position:30px -55px,-45px 35px,55px -30px}100%{background-position:0 0,0 0,0 0}}
+
+/* Every collection card stays equal-sized; individuality comes from its visual skin. */
+.company-work-grid>div:nth-child(1) .company-card{--project-accent:#2563eb}
+.company-work-grid>div:nth-child(2) .company-card{--project-accent:#7c3aed}
+.company-work-grid>div:nth-child(3) .company-card{--project-accent:#0ea5e9}
+.company-work-grid>div:nth-child(4) .company-card{--project-accent:#16a34a}
+.company-work-grid>div:nth-child(5) .company-card{--project-accent:#d4a72c}
+.company-work-grid>div:nth-child(6) .company-card{--project-accent:#f97316}
+.company-work-grid>div:nth-child(7) .company-card{--project-accent:#ef4444}
+.company-work-grid>div:nth-child(8) .company-card{--project-accent:#111827}
+.company-work-grid>div:nth-child(9) .company-card{--project-accent:#0f766e}
+.company-work-grid>div:nth-child(10) .company-card{--project-accent:#ec4899}
+.company-work-grid>div:nth-child(11) .company-card{--project-accent:#84cc16}
+.company-work-grid>div:nth-child(12) .company-card{--project-accent:#64748b}
+.company-work-grid>div:nth-child(13) .company-card{--project-accent:#b45309}
+.company-card{position:relative;overflow:hidden;isolation:isolate}
+.company-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,color-mix(in srgb,var(--project-accent) 14%,transparent),transparent 44%);opacity:.7;pointer-events:none;z-index:0}
+.company-card:after{content:"";position:absolute;inset:auto -30% -70% auto;width:55%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--project-accent) 22%,transparent),transparent 68%);filter:blur(20px);pointer-events:none;z-index:0}
+.company-card-inner,.company-info,.company-visual{position:relative;z-index:1}
+.company-card:hover .company-visual img,.company-card:hover .browser-screen iframe{transform:scale(1.035);filter:saturate(1.08)}
+.company-visual img,.browser-screen iframe{transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .7s ease}
+
+/* Project cards feel like product identities, not repeated templates. */
+.company-badges .glass-badge:first-child{border-color:color-mix(in srgb,var(--project-accent) 35%,transparent);color:var(--project-accent)}
+.company-card .company-caption:after{content:"EXPLORE →";display:block;margin-top:8px;font-size:10px;letter-spacing:.16em;font-weight:800;color:var(--project-accent);opacity:.8}
+
+/* Article worlds: each story gets a different editorial treatment while dimensions stay fixed. */
+.insights-grid .insight-button:nth-child(1) .insight-card{--article-accent:#7c3aed;background:linear-gradient(145deg,rgba(124,58,237,.11),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(2) .insight-card{--article-accent:#2563eb;background:linear-gradient(145deg,rgba(37,99,235,.11),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(3) .insight-card{--article-accent:#f97316;background:linear-gradient(145deg,rgba(249,115,22,.11),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(4) .insight-card{--article-accent:#ef4444;background:linear-gradient(145deg,rgba(239,68,68,.10),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(5) .insight-card{--article-accent:#0ea5e9;background:linear-gradient(145deg,rgba(14,165,233,.10),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(6) .insight-card{--article-accent:#111827;background:linear-gradient(145deg,rgba(17,24,39,.08),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(7) .insight-card{--article-accent:#ff6b35;background:linear-gradient(145deg,rgba(255,107,53,.10),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(8) .insight-card{--article-accent:#14b8a6;background:linear-gradient(145deg,rgba(20,184,166,.10),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(9) .insight-card{--article-accent:#8b5cf6;background:linear-gradient(145deg,rgba(139,92,246,.10),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(10) .insight-card{--article-accent:#22c55e;background:linear-gradient(145deg,rgba(34,197,94,.10),rgba(255,255,255,.72))}
+.insights-grid .insight-button:nth-child(11) .insight-card{--article-accent:#0891b2;background:linear-gradient(145deg,rgba(8,145,178,.10),rgba(255,255,255,.72))}
+.insight-card{position:relative;overflow:hidden;border-top:3px solid color-mix(in srgb,var(--article-accent) 65%,transparent)!important}
+.insight-card:before{content:"";position:absolute;width:180px;height:180px;right:-80px;top:-90px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--article-accent) 20%,transparent),transparent 68%);transition:transform .7s ease}
+.insight-button:hover .insight-card:before{transform:translate(-20px,25px) scale(1.25)}
+.insight-card small,.insight-card .insight-arrow{color:var(--article-accent)!important}
+
+/* More tactile controls */
+.filter-chip,.primary-cta,.text-cta,.product-row,.company-card-inner,.insight-button{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,border-color .35s ease}
+.filter-chip:hover,.primary-cta:hover,.text-cta:hover{transform:translateY(-2px)}
+.product-row:hover{transform:translateY(-5px) scale(1.006);box-shadow:0 28px 80px rgba(249,115,22,.13)!important}
+.game-card:hover,.capability:hover,.work-card:hover{transform:translateY(-6px) rotateX(.7deg);box-shadow:0 30px 80px rgba(249,115,22,.12)!important}
+
+/* A subtle scanline gives browser previews a living-device feel. */
+.browser-screen:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 0 46%,rgba(255,255,255,.08) 50%,transparent 54%);background-size:100% 220%;animation:chScan 8s linear infinite;mix-blend-mode:overlay}
+@keyframes chScan{from{background-position:0 -100%}to{background-position:0 100%}}
+
+/* Dark-mode project skins remain distinct but respect the ClastarHub shell. */
+body.dark .insights-grid .insight-button .insight-card{background:linear-gradient(145deg,color-mix(in srgb,var(--article-accent) 13%,#15100d),rgba(18,14,11,.92))}
+body.dark .company-card:before{opacity:.55}
+body.dark .clastar-site:before{mix-blend-mode:screen;opacity:.75}
+body.dark .company-card .company-caption:after{color:var(--project-accent)}
+
+/* Keyboard/focus quality: interactive design should remain accessible. */
+.clastar-site button:focus-visible,.clastar-site a:focus-visible{outline:2px solid var(--ch-orange);outline-offset:4px}
+@media(max-width:700px){.company-card:hover,.game-card:hover,.capability:hover,.work-card:hover{transform:translateY(-3px)}.clastar-site:before{background:radial-gradient(13rem circle at var(--pointer-x) var(--pointer-y),rgba(249,115,22,.08),transparent 68%)}}
+@media(prefers-reduced-motion:reduce){.clastar-site:before,.clastar-site .hero-section:after,.browser-screen:after{animation:none!important}.product-row:hover,.game-card:hover,.capability:hover,.work-card:hover{transform:none}}
