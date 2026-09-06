@@ -1,5 +1,5 @@
-import ClastarHomeV2 from './ClastarHomeV2';
+import ClastarCompanyHome from './ClastarCompanyHome';
 
 export default function App() {
-  return <ClastarHomeV2 />;
+  return <ClastarCompanyHome />;
 }
