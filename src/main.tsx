@@ -10,7 +10,7 @@ import './portfolio-polish.css'
 import './project-experience.css'
 import './portfolio-motion.css'
 import './clastar-overhaul.css'
-import './visual-refinement.css'
+import './clastar-orange-simple.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
