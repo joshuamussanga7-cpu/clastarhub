@@ -1,0 +1,126 @@
+/* ClastarHub final visual refinement: typography + theme consistency */
+:root{
+  --ch-font: "Plus Jakarta Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ch-display: "Plus Jakarta Sans", Inter, ui-sans-serif, system-ui, sans-serif;
+  --ch-ink:#10243a; --ch-muted:#65788c; --ch-soft:#8192a4; --ch-line:rgba(105,145,172,.18);
+  --ch-surface:rgba(255,255,255,.56); --ch-surface-strong:rgba(255,255,255,.72);
+}
+html,body,.clastar-site{font-family:var(--ch-font)!important}
+body{font-optical-sizing:auto;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button,a,input,textarea,select{font:inherit}
+
+/* Type scale: cleaner, less oversized, more editorial */
+.hero-welcome,.eyebrow,.section-kicker,.section-head>p,.hero-meta span,.scroll-cue,.product-topline,.product-info small,
+.company-footer,.filter-chip,.glass-badge,.insight-card small,.game-card small,.complete,.tech-line,.investment-kicker,
+.investment-step,footer{font-family:var(--ch-font);font-weight:700}
+.hero-welcome,.section-kicker{letter-spacing:.16em!important}
+.hero-welcome{font-size:11px!important;font-weight:800!important}
+.eyebrow{font-size:10px!important;letter-spacing:.12em!important}
+.hero-content h1{font-family:var(--ch-display)!important;font-weight:800!important;letter-spacing:-.072em!important;line-height:.88!important}
+.hero-content>p{font-size:clamp(16px,1.35vw,19px)!important;line-height:1.72!important;letter-spacing:-.012em}
+.section-head h2,h2,.investment-section h2,.contact-inner h2{font-family:var(--ch-display)!important;font-weight:800!important;letter-spacing:-.06em!important}
+.section-head h2{font-size:clamp(46px,5.8vw,82px)!important;line-height:.95!important}
+.statement h2{font-size:clamp(48px,6vw,86px)!important;line-height:.94!important}
+.statement-copy,.company-copy p,.investment-section .lead,.contact-inner>p:not(.section-kicker){font-size:clamp(15px,1.25vw,18px)!important;line-height:1.78!important;letter-spacing:-.008em}
+.product-info h3{font-family:var(--ch-display)!important;font-weight:750!important;letter-spacing:-.048em!important;line-height:.98!important}
+.product-row:first-child .product-info h3{font-size:clamp(40px,4.65vw,68px)!important}
+.product-info p{font-size:13px!important;line-height:1.68!important}
+.company-caption h3{font-family:var(--ch-display);font-size:clamp(21px,2vw,28px)!important;letter-spacing:-.035em}
+.company-info p{font-size:12.5px!important;line-height:1.68!important}
+.insight-card h3{font-family:var(--ch-display);font-weight:750!important;letter-spacing:-.035em!important;line-height:1.1!important}
+.insight-button:first-child .insight-card h3{font-size:clamp(30px,3vw,44px)!important}
+.game-card h3,.capability h3,.work-label h3{font-family:var(--ch-display);font-weight:750!important;letter-spacing:-.028em}
+.game-card h3{font-size:20px!important}
+.capability h3{font-size:17px!important}.capability p{font-size:12.5px!important}
+.company-division strong,.investment-card strong{font-family:var(--ch-display);font-weight:750!important}
+.company-division p,.investment-card p{font-size:11.5px!important;line-height:1.62!important}
+
+/* Light mode: softer surfaces and stronger hierarchy */
+body:not(.dark){color:#10243a!important;background:#edf5fa!important}
+body:not(.dark) .clastar-site{background:linear-gradient(180deg,#fbfdff 0%,#f2f8fc 38%,#f7f8ff 72%,#f1f7fb 100%)!important}
+body:not(.dark) .statement-section{background:linear-gradient(180deg,#f8fbfd,#edf6fb)!important}
+body:not(.dark) .hero-section{background:radial-gradient(circle at 76% 30%,rgba(52,211,246,.14),transparent 21%),radial-gradient(circle at 22% 76%,rgba(99,102,241,.09),transparent 27%),linear-gradient(140deg,#ffffff 0%,#f5fbff 52%,#eef6ff 100%)!important}
+body:not(.dark) .product-row,body:not(.dark) .work-card,body:not(.dark) .game-card,body:not(.dark) .investment-card,body:not(.dark) .company-division{box-shadow:0 18px 55px rgba(46,91,122,.07)}
+body:not(.dark) .product-row:hover{box-shadow:0 30px 80px rgba(46,91,122,.12)}
+body:not(.dark) .company-caption{ text-shadow:0 2px 14px rgba(5,20,35,.22)}
+
+/* Dark mode: fully rebuilt tokens so no light surfaces leak through */
+body.dark{background:#050c14!important;color:#eaf3fb!important}
+body.dark .clastar-site{background:linear-gradient(180deg,#06101b 0%,#081725 38%,#091421 72%,#050d16 100%)!important;color:#eaf3fb!important}
+body.dark .clastar-site:after{opacity:.13;background-image:radial-gradient(rgba(151,197,223,.24) .65px,transparent .65px)!important}
+body.dark .glass-nav{background:rgba(7,20,32,.62)!important;border-color:rgba(255,255,255,.1)!important;box-shadow:0 14px 50px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.08)!important}
+body.dark .brand{color:#ecf6ff!important}.brand-accent{filter:none}
+body.dark .nav-links button{color:#9eb3c6!important}.nav-links button:hover{color:#eef8ff!important;background:rgba(255,255,255,.07)!important}
+body.dark .theme-button,body.dark .mobile-nav-trigger button{background:rgba(14,31,47,.72)!important;border-color:rgba(255,255,255,.1)!important;color:#d9e8f4!important}
+body.dark .nav-contact{box-shadow:0 12px 34px rgba(60,104,255,.26)!important}
+body.dark .hero-section{background:radial-gradient(circle at 73% 28%,rgba(35,194,255,.09),transparent 23%),radial-gradient(circle at 21% 77%,rgba(93,99,255,.08),transparent 28%),linear-gradient(145deg,#06101b,#081826 55%,#07121e)!important}
+body.dark .hero-grid{opacity:.18!important;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px)!important}
+body.dark .hero-welcome,body.dark .section-kicker{color:#7fa7bd!important}
+body.dark .eyebrow,body.dark .hero-meta span{background:rgba(11,29,45,.55)!important;border-color:rgba(255,255,255,.11)!important;color:#a6bbcc!important;box-shadow:none!important}
+body.dark .hero-content h1,body.dark h2,body.dark .product-info h3,body.dark .company-caption h3,body.dark .insight-card h3,body.dark .game-card h3,body.dark .capability h3,body.dark .work-label h3,body.dark .investment-section h2,body.dark .contact-inner h2{color:#eff7ff!important}
+body.dark .hero-content>p,body.dark .statement-copy,body.dark .section-head>p,body.dark .product-info p,body.dark .product-info small,body.dark .company-info p,body.dark .company-copy p,body.dark .capability p,body.dark .tech-line,body.dark .contact-inner>p:not(.section-kicker),body.dark .investment-section .lead{color:#9db3c5!important}
+body.dark .statement-section{background:linear-gradient(180deg,#08131f,#07111b)!important;border-color:rgba(255,255,255,.07)!important}
+body.dark .products-section,body.dark #portfolio,body.dark .work-section,body.dark .technology-section,body.dark .company-section,body.dark .games-section{background:transparent!important}
+body.dark .product-row{background:linear-gradient(145deg,rgba(20,41,58,.78),rgba(8,25,41,.66))!important;border-color:rgba(255,255,255,.11)!important;box-shadow:0 22px 65px rgba(0,0,0,.16)!important}
+body.dark .product-row:hover{background:linear-gradient(145deg,rgba(26,50,70,.88),rgba(10,29,47,.76))!important}
+body.dark .product-row:after{background:linear-gradient(135deg,rgba(82,212,255,.06),transparent 45%,rgba(119,102,255,.06))!important}
+body.dark .product-number{color:#60778a!important}.product-topline span{color:#7f98aa!important}
+body.dark .product-orb{background:rgba(18,39,57,.66)!important;border-color:rgba(255,255,255,.11)!important}
+body.dark .product-arrow{color:#668096!important}
+body.dark .portfolio-glass{background:radial-gradient(380px circle at var(--fluid-x) var(--fluid-y),rgba(35,201,255,.09),transparent 34%),linear-gradient(135deg,rgba(20,42,59,.72),rgba(9,26,42,.62))!important;border-color:rgba(255,255,255,.11)!important;box-shadow:0 24px 70px rgba(0,0,0,.17),inset 0 1px 0 rgba(255,255,255,.06)!important}
+body.dark .portfolio-glass:before{background:radial-gradient(520px circle at var(--fluid-x) var(--fluid-y),rgba(255,255,255,.07),transparent 40%),radial-gradient(circle at 10% 5%,rgba(255,255,255,.04),transparent 28%)!important}
+body.dark .portfolio-glass-sheen{background:linear-gradient(125deg,rgba(255,255,255,.08),transparent 25%,transparent 66%,rgba(255,255,255,.04))!important}
+body.dark .company-info p,body.dark .insight-card p{color:#9ab0c2!important}
+body.dark .company-footer,body.dark .company-footer b,body.dark .insight-card small{color:#7591a5!important}
+body.dark .glass-badge,body.dark .tag-row span,body.dark .filter-chip,body.dark .modal-features span{background:rgba(12,32,48,.7)!important;border-color:rgba(255,255,255,.11)!important;color:#bdd0df!important}
+body.dark .filter-chip.active{background:linear-gradient(135deg,#15b8e7,#5e70ff)!important;color:#fff!important}
+body.dark .company-division{background:rgba(16,37,54,.68)!important;border-color:rgba(255,255,255,.1)!important}
+body.dark .company-division:hover{background:rgba(23,48,67,.78)!important}
+body.dark .company-division small{color:#71899b!important}.company-division strong{color:#dbeaf5!important}
+body.dark .work-card{background:rgba(11,28,43,.72)!important;border-color:rgba(255,255,255,.1)!important}
+body.dark .work-visual{background:radial-gradient(circle at 70% 30%,rgba(40,200,255,.08),transparent 31%),#081522!important}
+body.dark .work-window{background:#07111c!important;border-color:rgba(255,255,255,.1)!important}
+body.dark .game-card{background:rgba(14,34,50,.72)!important;border-color:rgba(255,255,255,.1)!important;box-shadow:0 18px 55px rgba(0,0,0,.14)!important}
+body.dark .capability-grid{border-color:rgba(255,255,255,.1)!important}
+body.dark .capability{background:rgba(13,32,48,.55)!important;border-color:rgba(255,255,255,.1)!important}
+body.dark .capability:hover{background:rgba(20,45,63,.72)!important}
+body.dark .company-section .portfolio-glass{background:linear-gradient(145deg,rgba(17,38,55,.75),rgba(8,24,39,.65))!important}
+body.dark .investment-section{background:radial-gradient(circle at 15% 45%,rgba(32,187,229,.08),transparent 25%),linear-gradient(140deg,#071725,#0a1725 57%,#0d1424)!important;border-color:rgba(255,255,255,.08)!important}
+body.dark .investment-card{background:rgba(16,37,54,.72)!important;border-color:rgba(255,255,255,.1)!important;box-shadow:0 22px 65px rgba(0,0,0,.16)!important}
+body.dark .investment-card p{color:#98afc1!important}.investment-step{color:#8fa7b9!important}
+body.dark .investment-step{background:rgba(11,28,43,.65)!important;border-color:rgba(255,255,255,.09)!important}
+body.dark .contact-section{background:linear-gradient(145deg,#07131f,#0a1725 58%,#0c1422)!important;border-color:rgba(255,255,255,.08)!important}
+body.dark .contact-inner .portfolio-glass{box-shadow:0 30px 100px rgba(0,0,0,.22)!important}
+body.dark footer{background:rgba(6,17,27,.75)!important;border-color:rgba(255,255,255,.08)!important;color:#668094!important}
+body.dark .footer-inner strong{color:#dceaf4!important}.mobile-menu{box-shadow:0 20px 55px rgba(0,0,0,.26)!important}
+body.dark .mobile-menu{background:rgba(9,27,41,.88)!important;border-color:rgba(255,255,255,.1)!important}.mobile-menu button{color:#a9bdcc!important}
+body.dark .project-overlay{background:rgba(2,10,17,.72)!important}.project-modal{backdrop-filter:blur(30px)}
+body.dark .project-modal{background:rgba(9,25,40,.94)!important;border-color:rgba(255,255,255,.11)!important;box-shadow:0 30px 120px rgba(0,0,0,.45)!important}
+body.dark .modal-description{color:#9bb1c1!important}.modal-meta>div{background:rgba(255,255,255,.035)!important;border-color:rgba(255,255,255,.08)!important}.modal-meta small{color:#728b9f!important}
+
+/* Device-safe composition */
+@media(max-width:980px){
+  .container{width:min(100% - 32px,760px)!important}
+  .hero-content h1{max-width:760px!important;font-size:clamp(58px,11vw,96px)!important}
+  .product-row{min-height:315px!important}
+  .product-row:first-child{min-height:360px!important}
+  .company-caption h3{font-size:22px!important}
+}
+@media(max-width:640px){
+  .container{width:calc(100% - 24px)!important}
+  .section-pad{padding:92px 0!important}
+  .statement-section{padding:92px 0!important}
+  .hero-content{padding:112px 0 96px!important}
+  .hero-content h1{font-size:clamp(48px,15vw,76px)!important;line-height:.9!important;max-width:100%!important}
+  .hero-content>p{font-size:15px!important;line-height:1.7!important}
+  .section-head h2{font-size:clamp(42px,12vw,60px)!important}
+  .statement h2{font-size:clamp(42px,12vw,62px)!important}
+  .product-row{min-height:275px!important;padding:23px!important}
+  .product-row:first-child{min-height:320px!important}
+  .product-row:first-child .product-info h3{font-size:38px!important}
+  .company-caption h3{font-size:20px!important}
+  .insight-button:first-child .insight-card h3{font-size:30px!important}
+  .investment-section h2{font-size:clamp(44px,12vw,58px)!important}
+  .contact-inner h2{font-size:58px!important}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
