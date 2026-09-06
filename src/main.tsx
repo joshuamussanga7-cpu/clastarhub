@@ -6,6 +6,7 @@ import './premium-effects.css'
 import './portfolio-glass.css'
 import './portfolio-layout.css'
 import './portfolio-sections.css'
+import './portfolio-polish.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
