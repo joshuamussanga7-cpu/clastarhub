@@ -12,6 +12,7 @@ import './portfolio-motion.css'
 import './clastar-overhaul.css'
 import './clastar-cards-bubbles.css'
 import './clastar-immersive.css'
+import './clastar-home-v2.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
