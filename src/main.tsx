@@ -16,6 +16,7 @@ import './clastar-home-v2.css'
 import './clastar-palette.css'
 import './clastar-company-polish.css'
 import './clastar-product-pages.css'
+import './clastar-solutions-technology.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
