@@ -1,5 +1,12 @@
-import ClastarCompanyHome from './ClastarCompanyHome';
+import ClastarCompanyHome from './ClastarCompanyHome'
+import ClastarProductPages from './ClastarProductPages'
 
 export default function App() {
-  return <ClastarCompanyHome />;
+  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+
+  if (path === '/products' || path.startsWith('/products/')) {
+    return <ClastarProductPages />
+  }
+
+  return <ClastarCompanyHome />
 }
