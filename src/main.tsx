@@ -11,6 +11,7 @@ import './project-experience.css'
 import './portfolio-motion.css'
 import './clastar-overhaul.css'
 import './clastar-cards-bubbles.css'
+import './clastar-immersive.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
