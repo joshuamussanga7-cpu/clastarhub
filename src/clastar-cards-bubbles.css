@@ -1,16 +1,14 @@
 :root{--ch-orange:#f97316;--ch-orange-deep:#ea580c;--ch-surface:rgba(255,255,255,.76);--ch-border:rgba(83,57,39,.12);--ch-text:#19130f;--ch-muted:#74685f}
-
-/* Animated bubble atmosphere */
-.clastar-site:before{content:"";position:fixed;z-index:-1;top:11vh;left:7vw;width:150px;height:150px;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 31% 24%,rgba(255,255,255,.95),rgba(255,255,255,.56) 18%,rgba(249,115,22,.16) 50%,rgba(249,115,22,0) 72%);border:1px solid rgba(249,115,22,.14);box-shadow:inset -18px -18px 36px rgba(234,88,12,.07),inset 12px 12px 28px rgba(255,255,255,.75),0 18px 60px rgba(249,115,22,.08),260px 170px 0 -42px rgba(249,115,22,.10),560px 520px 0 -22px rgba(249,115,22,.13),930px 120px 0 -52px rgba(249,115,22,.08),780px 740px 0 -28px rgba(249,115,22,.09);animation:chBubbleDrift 18s ease-in-out infinite alternate}
-.clastar-site:after{content:"";position:fixed;z-index:-1;right:8vw;top:49vh;width:260px;height:260px;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 34% 25%,rgba(255,255,255,.8),rgba(255,255,255,.32) 23%,rgba(249,115,22,.12) 51%,transparent 73%);border:1px solid rgba(249,115,22,.12);box-shadow:inset -22px -25px 45px rgba(234,88,12,.06),inset 14px 14px 30px rgba(255,255,255,.65),0 22px 75px rgba(249,115,22,.07),-270px 360px 0 -64px rgba(249,115,22,.08),-640px 110px 0 -34px rgba(249,115,22,.10);animation:chBubbleDriftB 23s ease-in-out infinite alternate-reverse}
+.clastar-site{position:relative;isolation:isolate;overflow:hidden}
+.clastar-site:before{content:"";position:fixed;z-index:0;top:11vh;left:7vw;width:150px;height:150px;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 31% 24%,rgba(255,255,255,.95),rgba(255,255,255,.56) 18%,rgba(249,115,22,.16) 50%,rgba(249,115,22,0) 72%);border:1px solid rgba(249,115,22,.14);box-shadow:inset -18px -18px 36px rgba(234,88,12,.07),inset 12px 12px 28px rgba(255,255,255,.75),0 18px 60px rgba(249,115,22,.08),260px 170px 0 -42px rgba(249,115,22,.10),560px 520px 0 -22px rgba(249,115,22,.13),930px 120px 0 -52px rgba(249,115,22,.08),780px 740px 0 -28px rgba(249,115,22,.09);animation:chBubbleDrift 18s ease-in-out infinite alternate}
+.clastar-site:after{content:"";position:fixed;z-index:0;right:8vw;top:49vh;width:260px;height:260px;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 34% 25%,rgba(255,255,255,.8),rgba(255,255,255,.32) 23%,rgba(249,115,22,.12) 51%,transparent 73%);border:1px solid rgba(249,115,22,.12);box-shadow:inset -22px -25px 45px rgba(234,88,12,.06),inset 14px 14px 30px rgba(255,255,255,.65),0 22px 75px rgba(249,115,22,.07),-270px 360px 0 -64px rgba(249,115,22,.08),-640px 110px 0 -34px rgba(249,115,22,.10);animation:chBubbleDriftB 23s ease-in-out infinite alternate-reverse}
+.clastar-site>main,.clastar-site>footer,.clastar-site>.glass-nav,.clastar-site>.mobile-nav-trigger,.clastar-site>.mobile-menu{position:relative;z-index:1}
 @keyframes chBubbleDrift{0%{transform:translate3d(0,0,0) scale(.96)}50%{transform:translate3d(38px,-28px,0) scale(1.04)}100%{transform:translate3d(-18px,30px,0) scale(1)}}
 @keyframes chBubbleDriftB{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-42px,24px,0) scale(.94)}100%{transform:translate3d(25px,-18px,0) scale(1.05)}}
-
-/* Equal-height card system */
 .product-list,.company-work-grid,.work-grid,.insights-grid,.game-strip,.capability-grid{align-items:stretch}
 .product-row,.company-work-grid>div,.work-grid>.work-card,.insight-button,.game-strip>.game-card,.capability{min-height:0}
-.product-row{height:360px!important;padding:28px!important}
-.product-row:first-child,.product-row:nth-child(2),.product-row:nth-child(3),.product-row:nth-child(4),.product-row:nth-child(5){height:360px!important;min-height:360px!important}
+.product-row,.product-row:first-child,.product-row:nth-child(2),.product-row:nth-child(3),.product-row:nth-child(4),.product-row:nth-child(5){height:360px!important;min-height:360px!important;padding:28px!important}
+.product-info{display:flex;flex-direction:column;height:100%;justify-content:flex-end}
 .company-work-grid>div,.work-grid>.work-card,.insight-button,.game-strip>.game-card{height:360px}
 .company-card,.work-card,.insight-card,.game-card,.company-card-inner{height:100%}
 .company-visual{height:215px!important;aspect-ratio:auto!important}.company-info{height:145px;display:flex;flex-direction:column;justify-content:space-between}
@@ -18,8 +16,6 @@
 .insight-card{height:360px!important;display:flex;flex-direction:column}.insight-arrow{margin-top:auto!important}
 .game-card{height:360px!important;display:flex;flex-direction:column}.game-card small{margin-top:36px}.game-card .complete{margin-top:auto}
 .capability{height:260px!important;min-height:260px;display:flex;flex-direction:column}.capability svg{margin-bottom:auto!important}.capability p{margin-top:auto}
-
-/* Orange light theme */
 body:not(.dark) .clastar-site{background:#faf7f3;color:var(--ch-text)}
 body:not(.dark) .clastar-site .portfolio-glass,body:not(.dark) .clastar-site .product-row,body:not(.dark) .clastar-site .game-card,body:not(.dark) .clastar-site .company-card,body:not(.dark) .clastar-site .work-card,body:not(.dark) .clastar-site .insight-card,body:not(.dark) .clastar-site .capability,body:not(.dark) .clastar-site .investment-card{background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(255,247,240,.58));border-color:var(--ch-border);box-shadow:0 20px 65px rgba(112,71,38,.08),inset 0 1px 0 rgba(255,255,255,.92)}
 body:not(.dark) .clastar-site h1,body:not(.dark) .clastar-site h2,body:not(.dark) .clastar-site h3{color:var(--ch-text)}
@@ -28,8 +24,6 @@ body:not(.dark) .clastar-site .section-head>p,body:not(.dark) .clastar-site .pro
 body:not(.dark) .clastar-site .primary-cta{background:linear-gradient(135deg,#ea580c,#f97316);box-shadow:0 14px 34px rgba(234,88,12,.22)}
 body:not(.dark) .clastar-site .product-orb{color:#ea580c;background:rgba(249,115,22,.07);border-color:rgba(249,115,22,.16)}
 body:not(.dark) .clastar-site .status-live,body:not(.dark) .clastar-site .status-progress{color:#c2410c!important;background:rgba(249,115,22,.10)!important}
-
-/* Orange dark theme */
 body.dark .clastar-site{background:#0d0b09;color:#fff7ed}
 body.dark .clastar-site .portfolio-glass,body.dark .clastar-site .product-row,body.dark .clastar-site .game-card,body.dark .clastar-site .company-card,body.dark .clastar-site .work-card,body.dark .clastar-site .insight-card,body.dark .clastar-site .capability,body.dark .clastar-site .investment-card{background:linear-gradient(145deg,rgba(35,25,18,.88),rgba(19,15,12,.76));border-color:rgba(255,183,117,.12);box-shadow:0 22px 75px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05)}
 body.dark .clastar-site h1,body.dark .clastar-site h2,body.dark .clastar-site h3{color:#fff7ed}
@@ -50,7 +44,6 @@ body.dark .clastar-site .statement-section,body.dark .clastar-site .games-sectio
 body.dark .clastar-site .work-visual,body.dark .clastar-site .company-visual,body.dark .clastar-site .browser-shell{background:#17110d}
 body.dark .clastar-site .investment-section{background:linear-gradient(145deg,#120e0b,#1a120c)!important}
 body.dark .clastar-site .contact-section{background:linear-gradient(145deg,#0d0b09,#16100c)!important}
-
 @media(max-width:980px){.product-row,.product-row:first-child,.product-row:nth-child(2),.product-row:nth-child(3),.product-row:nth-child(4),.product-row:nth-child(5){height:340px!important;min-height:340px!important}.company-work-grid>div,.work-grid>.work-card,.insight-button,.game-strip>.game-card{height:340px}.company-visual{height:205px!important}.company-info{height:135px}.work-visual{height:245px!important}.work-label{height:95px}.insight-card,.game-card{height:340px!important}.capability{height:245px!important;min-height:245px}.clastar-site:before{width:125px;height:125px}.clastar-site:after{width:210px;height:210px}}
 @media(max-width:640px){.product-row,.product-row:first-child,.product-row:nth-child(2),.product-row:nth-child(3),.product-row:nth-child(4),.product-row:nth-child(5){height:320px!important;min-height:320px!important}.company-work-grid>div,.work-grid>.work-card,.insight-button,.game-strip>.game-card{height:320px}.company-visual{height:195px!important}.company-info{height:125px}.work-visual{height:225px!important}.work-label{height:95px}.insight-card,.game-card{height:320px!important}.capability{height:230px!important;min-height:230px}.clastar-site:before{width:100px;height:100px;left:4vw}.clastar-site:after{width:160px;height:160px;right:1vw}}
 @media(prefers-reduced-motion:reduce){.clastar-site:before,.clastar-site:after{animation:none!important}}
