@@ -9,6 +9,7 @@ import './portfolio-sections.css'
 import './portfolio-polish.css'
 import './project-experience.css'
 import './portfolio-motion.css'
+import './clastar-overhaul.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
