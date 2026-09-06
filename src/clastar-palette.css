@@ -1,0 +1,39 @@
+:root{--ch-bg:#0B0F17;--ch-bg-2:#0E131F;--ch-card:#161B26;--ch-white:#FFFFFF;--ch-muted:#94A3B8;--ch-blue:#3B82F6;--ch-purple:#A855F7;--ch-gradient:linear-gradient(135deg,#3B82F6 0%,#A855F7 100%);--ch-border:rgba(255,255,255,.08);--ch-border-strong:rgba(255,255,255,.14);--ch-shadow:0 24px 80px rgba(0,0,0,.34)}
+
+.clastar-site,.clastar-v2{background:radial-gradient(circle at 18% 8%,rgba(59,130,246,.09),transparent 28%),radial-gradient(circle at 84% 20%,rgba(168,85,247,.08),transparent 30%),linear-gradient(180deg,var(--ch-bg),var(--ch-bg-2) 48%,var(--ch-bg));color:var(--ch-white);min-height:100vh}
+.clastar-site main,.clastar-v2 main{position:relative;z-index:2}
+
+/* One accent system: blue -> purple only. */
+.clastar-site .primary-cta,.clastar-site .v2-primary,.clastar-v2 .primary-cta,.clastar-v2 .v2-primary{background:var(--ch-gradient)!important;color:#fff!important;border:1px solid rgba(255,255,255,.12)!important;box-shadow:0 16px 40px rgba(59,130,246,.18)}
+.clastar-site .text-cta,.clastar-site .v2-secondary,.clastar-v2 .text-cta,.clastar-v2 .v2-secondary{color:#DCE7F7!important;border-color:var(--ch-border-strong)!important;background:rgba(22,27,38,.58)!important}
+.clastar-site .section-kicker,.clastar-site .v2-kicker,.clastar-v2 .section-kicker,.clastar-v2 .v2-kicker{color:#8BC5FF!important}
+.clastar-site h1 em,.clastar-site h2 span,.clastar-v2 h1 em,.clastar-v2 h2 span,.clastar-v2 .v2-brand span span,.clastar-site footer strong span{background:var(--ch-gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Glass surfaces */
+.clastar-site .glass-card,.clastar-site .glassmorphic-card,.clastar-site .product-row,.clastar-site .company-card,.clastar-site .game-card,.clastar-site .work-card,.clastar-site .capability,.clastar-v2 .v2-destination-card,.clastar-v2 .v2-project-card,.clastar-v2 .v2-split-card,.clastar-v2 .v2-tech-chip,.clastar-v2 .v2-lab-card,.clastar-v2 .v2-investment-card,.clastar-v2 .v2-contact-card{background:rgba(22,27,38,.75)!important;background-image:linear-gradient(135deg,rgba(255,255,255,.045),transparent 45%)!important;border:1px solid var(--ch-border)!important;box-shadow:var(--ch-shadow)}
+.clastar-site .glass-card,.clastar-site .glassmorphic-card,.clastar-site .product-row,.clastar-site .company-card,.clastar-site .game-card,.clastar-site .work-card,.clastar-site .capability,.clastar-v2 .v2-destination-card,.clastar-v2 .v2-project-card,.clastar-v2 .v2-split-card,.clastar-v2 .v2-tech-chip,.clastar-v2 .v2-lab-card,.clastar-v2 .v2-investment-card,.clastar-v2 .v2-contact-card{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+
+/* Remove old per-project accent rainbow. */
+.company-work-grid>div .company-card,.insights-grid .insight-button .insight-card{--project-accent:var(--ch-blue)!important;--article-accent:var(--ch-blue)!important}
+.company-card:before{background:linear-gradient(135deg,rgba(59,130,246,.09),rgba(168,85,247,.07) 48%,transparent 72%)!important}
+.company-card:after{background:radial-gradient(circle,rgba(168,85,247,.14),transparent 68%)!important}
+.company-badges .glass-badge:first-child,.company-card .company-caption:after,.insight-card small,.insight-card .insight-arrow{color:#9CCBFF!important;border-color:rgba(59,130,246,.32)!important}
+.insight-card{border-top:2px solid rgba(122,162,255,.52)!important;background:rgba(22,27,38,.75)!important}
+.insight-card:before{background:radial-gradient(circle,rgba(168,85,247,.16),transparent 68%)!important}
+
+/* Ambient blue-purple glass orbs */
+.clastar-site:before,.clastar-v2:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(18rem circle at 12% 18%,rgba(59,130,246,.10),transparent 65%),radial-gradient(22rem circle at 88% 24%,rgba(168,85,247,.11),transparent 66%);animation:chAmbient 18s ease-in-out infinite alternate}
+.clastar-site:after,.clastar-v2:after{content:"";position:fixed;pointer-events:none;z-index:0;width:210px;height:210px;left:10%;top:26%;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.22),rgba(59,130,246,.13) 22%,rgba(59,130,246,.05) 48%,transparent 72%);filter:blur(1px);box-shadow:inset -24px -28px 55px rgba(168,85,247,.10),0 0 60px rgba(59,130,246,.08);animation:chOrbA 15s ease-in-out infinite alternate}
+@keyframes chAmbient{0%{transform:translate3d(-1%,0,0) scale(1)}100%{transform:translate3d(1%,2%,0) scale(1.04)}}
+@keyframes chOrbA{0%{transform:translate3d(0,0,0) scale(.9);opacity:.42}100%{transform:translate3d(48vw,38vh,0) scale(1.15);opacity:.76}}
+
+.clastar-site .hero-section:after,.clastar-v2 .v2-hero:after{content:"";position:absolute;pointer-events:none;inset:0;background:radial-gradient(12px 12px at 17% 24%,rgba(59,130,246,.34),transparent 70%),radial-gradient(18px 18px at 74% 19%,rgba(168,85,247,.26),transparent 70%),radial-gradient(10px 10px at 66% 76%,rgba(59,130,246,.26),transparent 70%);opacity:.65;animation:chParticles 20s ease-in-out infinite alternate}
+@keyframes chParticles{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(22px,-18px,0)}}
+
+.clastar-site .product-orb,.clastar-site .modal-orb,.clastar-site .lab-orb{background:var(--ch-gradient)!important;color:#fff!important;box-shadow:0 0 40px rgba(59,130,246,.22),0 0 60px rgba(168,85,247,.13)!important}
+.clastar-site .status-live,.clastar-site .status-progress,.clastar-v2 .project-type,.clastar-v2 .project-footer span{color:#9CCBFF!important}
+.clastar-site .tech-line,.clastar-site .company-mark{color:#A7B6CA!important}
+.clastar-site button:focus-visible,.clastar-site a:focus-visible,.clastar-v2 button:focus-visible,.clastar-v2 a:focus-visible{outline:2px solid #7CB8FF!important;outline-offset:4px}
+
+@media(max-width:700px){.clastar-site:after,.clastar-v2:after{width:130px;height:130px}.clastar-site .product-row:hover,.clastar-site .game-card:hover,.clastar-site .capability:hover,.clastar-site .work-card:hover,.clastar-v2 .v2-project-card:hover,.clastar-v2 .v2-destination-card:hover{transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.clastar-site:before,.clastar-site:after,.clastar-site .hero-section:after,.clastar-v2:before,.clastar-v2:after,.clastar-v2 .v2-hero:after{animation:none!important}}
