@@ -5,6 +5,8 @@ import './navbar.css';
 const Navbar = () => {
   const links = [
     ['Products', 'products'],
+    ['Portfolio', 'portfolio'],
+    ['Insights', 'portfolio'],
     ['Work', 'work'],
     ['Technology', 'technology'],
     ['Company', 'company'],
@@ -19,7 +21,7 @@ const Navbar = () => {
           <span className="brand-symbol">C</span><span>CLASTAR<span className="brand-accent">HUB</span></span>
         </motion.button>
         <div className="nav-links">
-          {links.map(([label, id]) => <button key={id} onClick={() => scrollTo(id)}>{label}</button>)}
+          {links.map(([label, id]) => <button key={label} onClick={() => scrollTo(id)}>{label}</button>)}
         </div>
         <button className="nav-contact" onClick={() => scrollTo('contact')}>Let’s talk <ArrowUpRight size={15} /></button>
       </div>
