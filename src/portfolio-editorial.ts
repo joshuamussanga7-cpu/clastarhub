@@ -94,8 +94,7 @@ export const portfolioEditorial:EditorialArticle[]=[
   {heading:'Find the expensive work',body:['Look first at repeated work such as rendering, animation, image processing, physics and data operations. Optimize the largest costs before small isolated functions.']},
   {heading:'Control asset and memory use',body:['Oversized textures, unnecessary animation and duplicated resources increase memory pressure. Use appropriately sized assets and release resources when they are no longer needed.']},
   {heading:'Measure on target hardware',body:['A game should be tested on the devices its intended players use. Performance on a development computer is not a reliable substitute for real-device observation.']}
- ]}
-
+ ]},
  {slug:'getting-started-nextjs-14',title:'Getting started with Next.js: routing, rendering and the App Router',category:'Engineering · Web',description:'An introductory guide to the Next.js application structure, routes and reusable components.',date:'2026-08-24',tags:['Next.js','React','Web development'],kind:'article',sections:[
   {heading:'Why use a framework such as Next.js?',body:['Next.js provides a structured environment for React applications, including file-based routing, server rendering options and integrated application features. The right rendering strategy depends on the product and its content.']},
   {heading:'Understand the App Router',body:['The App Router organizes application routes through the app directory. Page and layout files define route content and shared structures, making larger web applications easier to organize.']},
