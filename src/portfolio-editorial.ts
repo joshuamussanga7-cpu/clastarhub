@@ -1,5 +1,5 @@
 export type PortfolioMedia = { src:string; alt:string; caption:string }
-const raw='https://raw.githubusercontent.com/joshuamussanga7-cpu/sitta-jared-portfolio/main/public/projects/';
+const raw='https://sitta-jared-portfolio-afwp9ikbs-sitta.vercel.app/projects/';
 export const projectMedia:Record<string,PortfolioMedia[]> = {
  'university-notes':[
   {src:raw+'University%20Notes-1.jpg',alt:'University Notes home screen',caption:'Learning resources home'},
