@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Kalam:wght@400;700&family=Patrick+Hand&family=Permanent+Marker&family=Rock+Salt&display=swap');
+
+/* ClastarHub handwritten accent system — restrained, section-specific use.
+   Keep the site's existing sans-serif system for navigation, body copy and UI. */
+
+/* 1. Caveat — expressive, warm accent in the hero */
+.hero .hero-copy h1 em {
+  font-family: 'Caveat', cursive;
+  font-size: 1.13em;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  display: inline-block;
+  transform: rotate(-3deg);
+}
+
+/* 2. Patrick Hand — approachable accent in the company introduction */
+.intro-section .section-head h2 em {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.08em;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* 3. Kalam — expressive handwritten statement in the brand manifesto */
+.statement-band h2 em {
+  font-family: 'Kalam', cursive;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+
+/* 4. Permanent Marker — bold, poster-like product names */
+.products-section .project-card h3 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+/* 5. Rock Salt — intentionally rare, rough-sketch accent for services */
+.services-section .section-head h2 em {
+  font-family: 'Rock Salt', cursive;
+  font-size: .72em;
+  line-height: 1.5;
+  letter-spacing: -.055em;
+}
+
+/* Keep the handwritten treatments readable on smaller screens. */
+@media (max-width: 700px) {
+  .hero .hero-copy h1 em { font-size: 1.08em; }
+  .products-section .project-card h3 { font-size: 1.25rem; }
+  .services-section .section-head h2 em { font-size: .66em; }
+}
