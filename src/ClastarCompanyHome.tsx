@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, BrainCircuit, Building2, Layers3, Menu, Rocket, Sparkles, X, Zap, type LucideIcon } from 'lucide-react';
 import { useState } from 'react';
+import AshAtmosphere from './AshAtmosphere';
 
 type Product = [string, string, string, string, string];
 type Destination = { title: string; desc: string; Icon: LucideIcon; href: string };
 
 const products: Product[] = [
-  ['University Notes','DIGITAL PRODUCT','Learning ecosystem combining study resources, community and AI.','LIVE · WEB + ANDROID','https://webuni.clastarhub.com'],
+  ['University Notes','DIGITAL PRODUCT','Learning ecosystem combining study resources, community and AI.','LIVE · WEB + ANDROID','https://uninotes.clastarhub.com'],
   ['SAVI','PRODUCT · IN DEVELOPMENT','Student platform built around tasks, rewards, validation and trusted workflows.','IN DEVELOPMENT · WEB + MOBILE','#contact'],
   ['KAYMEX','DIGITAL SOLUTION','Corporate web experience designed around clarity and credibility.','SELECTED WORK · WEB','#solutions'],
 ];
@@ -22,7 +23,7 @@ const lab = ['IQ Booster','Stack Hop','Hoop Shot','FanSport Race'];
 export default function ClastarCompanyHome(){
  const [open,setOpen]=useState(false);
  const go=(id:string)=>{if(id.startsWith('#'))document.querySelector(id)?.scrollIntoView({behavior:'smooth'});setOpen(false)};
- return <div className="clastar-v2">
+ return <div className="clastar-v2"><AshAtmosphere />
   <header className="v2-nav"><a className="v2-brand" href="#home"><span className="brand-mark">C</span><span>CLASTAR<span>HUB</span></span></a><nav className="v2-nav-links"><button onClick={()=>go('#products')}>Products</button><button onClick={()=>go('#solutions')}>Solutions</button><button onClick={()=>go('#technology')}>Technology</button><button onClick={()=>go('#company')}>Company</button><button onClick={()=>go('#resources')}>Resources</button></nav><div className="v2-nav-actions"><button className="menu-toggle" onClick={()=>setOpen(!open)} aria-label="Menu">{open?<X size={20}/>:<Menu size={20}/>}</button><button className="nav-cta" onClick={()=>go('#contact')}>Contact <ArrowUpRight size={16}/></button></div></header>
   {open&&<div className="v2-mobile-menu">{[['Products','#products'],['Solutions','#solutions'],['Technology','#technology'],['Company','#company'],['Resources','#resources'],['Contact','#contact']].map(([n,h])=><button key={h} onClick={()=>go(h)}>{n}</button>)}</div>}
   <main>

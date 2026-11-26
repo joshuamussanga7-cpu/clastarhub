@@ -2,24 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import './premium-effects.css'
-import './portfolio-glass.css'
-import './portfolio-layout.css'
-import './portfolio-sections.css'
-import './portfolio-polish.css'
-import './project-experience.css'
-import './portfolio-motion.css'
-import './clastar-overhaul.css'
-import './clastar-cards-bubbles.css'
-import './clastar-immersive.css'
-import './clastar-home-v2.css'
-import './clastar-palette.css'
-import './clastar-company-polish.css'
-import './clastar-product-pages.css'
-import './clastar-solutions-technology.css'
+import './clastar-site.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <React.StrictMode><App /></React.StrictMode>,
 )
