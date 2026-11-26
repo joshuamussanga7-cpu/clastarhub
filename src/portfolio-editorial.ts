@@ -95,6 +95,18 @@ export const portfolioEditorial:EditorialArticle[]=[
   {heading:'Control asset and memory use',body:['Oversized textures, unnecessary animation and duplicated resources increase memory pressure. Use appropriately sized assets and release resources when they are no longer needed.']},
   {heading:'Measure on target hardware',body:['A game should be tested on the devices its intended players use. Performance on a development computer is not a reliable substitute for real-device observation.']}
  ]}
+
+ {slug:'getting-started-nextjs-14',title:'Getting started with Next.js: routing, rendering and the App Router',category:'Engineering · Web',description:'An introductory guide to the Next.js application structure, routes and reusable components.',date:'2026-08-24',tags:['Next.js','React','Web development'],kind:'article',sections:[
+  {heading:'Why use a framework such as Next.js?',body:['Next.js provides a structured environment for React applications, including file-based routing, server rendering options and integrated application features. The right rendering strategy depends on the product and its content.']},
+  {heading:'Understand the App Router',body:['The App Router organizes application routes through the app directory. Page and layout files define route content and shared structures, making larger web applications easier to organize.']},
+  {heading:'Start with a small component',body:['Build a focused page, extract reusable interface elements and add routes as the product needs them. Keep the component structure understandable as the application grows.']}
+ ]},
+ {slug:'how-to-build-a-game-ui',title:'How to build a game interface that feels fast and clear',category:'Interactive · Design',description:'Practical principles for game interfaces where players need immediate clarity and responsive feedback.',date:'2026-08-27',tags:['Game UI','UX','Mobile games','Interaction design'],kind:'article',sections:[
+  {heading:'Prioritize the important information',body:['Score, current objective, remaining attempts and the next useful action usually deserve the strongest visual hierarchy. A player should understand what matters at a glance.']},
+  {heading:'Make touch targets obvious',body:['Mobile controls need enough size, spacing and contrast to be pressed confidently. Ambiguous icons and tiny controls create friction even when the game logic works correctly.']},
+  {heading:'Match feedback to the action',body:['A tap should produce a visible response. Motion, score changes and concise visual effects help the player understand cause and effect.']},
+  {heading:'Avoid unnecessary visual noise',body:['Animation, color and sound should reinforce important events rather than compete with gameplay. Every interface element should earn its space.']}
+ ]},
 ];
 export const faqs=[
  {q:'What does ClastarHub build?',a:'ClastarHub develops mobile applications, websites and web applications, backend-connected products, AI-enabled features and interactive digital experiences.'},
