@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&family=Kalam:wght@400;700&family=Patrick+Hand&family=Permanent+Marker&family=Rock+Salt&display=swap');
+
+/* ClastarHub — warm editorial handwriting system, based on the approved mobile reference. */
+:root {
+  font-family: 'Inter', sans-serif !important;
+  color: #171613 !important;
+  background: #f2f0ea !important;
+  --line: rgba(24,22,18,.16) !important;
+  --orange: #ff6338 !important;
+  --orange2: #ff6338 !important;
+}
+html, body, .clastar-site {
+  background: #f2f0ea !important;
+  color: #171613 !important;
+  font-family: 'Inter', sans-serif !important;
+}
+::selection { background: #ff6338; color: #fff; }
+::-webkit-scrollbar-track { background: #e8e5dc; }
+::-webkit-scrollbar-thumb { background: #ff6338; border-radius: 0; }
+
+/* Remove the dark atmospheric/glass treatment and use the clean editorial canvas. */
+.ash-layer, .hero-grid, .hero-glow { display: none !important; }
+.smoke { display: none !important; }
+.site-loader { background: #f2f0ea !important; color: #171613 !important; }
+.loader-mark { color: #fff !important; background: #171613 !important; border: 0 !important; border-radius: 0 !important; box-shadow: 7px 7px 0 #ff6338 !important; font-family: 'Caveat', cursive !important; }
+.loader-name { color: #171613 !important; font-family: 'Inter', sans-serif !important; }
+.loader-track { background: #d7d2c8 !important; }
+
+/* Navigation and shared controls. */
+.site-header, .site-header.is-scrolled {
+  height: 84px; background: rgba(242,240,234,.96) !important;
+  border-bottom: 1px solid rgba(24,22,18,.16) !important;
+  backdrop-filter: none !important; padding-inline: max(5vw,24px);
+}
+.wordmark { color: #171613 !important; font-family: 'Inter',sans-serif !important; }
+.wordmark-symbol { color: #fff !important; background: #171613 !important; border: 0 !important; border-radius: 0 !important; box-shadow: 5px 5px 0 #ff6338; font-family: 'Caveat',cursive !important; }
+.wordmark>span:last-child>span { color: #ff6338 !important; }
+.desktop-nav a, .footer-col a, .footer-col span { color: #68665f !important; }
+.desktop-nav a:hover, .footer-col a:hover { color: #ff6338 !important; }
+.header-cta { color: #171613 !important; border: 1px solid #171613 !important; border-radius: 0 !important; background: transparent !important; }
+.mobile-toggle { color: #171613 !important; background: transparent !important; border: 1px solid #171613 !important; border-radius: 0 !important; }
+.mobile-nav { background: #f2f0ea !important; border-color: var(--line) !important; }
+.mobile-nav a { color: #171613 !important; border-color: var(--line) !important; }
+.button { border-radius: 0 !important; min-height: 52px; letter-spacing: .12em; text-transform: uppercase; font-size: 10px !important; }
+.button-primary { background: #171613 !important; color: #fff !important; box-shadow: none !important; }
+.button-secondary { color: #171613 !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid #171613 !important; }
+.button-primary:hover { background: #ff6338 !important; color: #171613 !important; }
+
+/* Handwritten display type is now the site's signature, with Inter retained for reading. */
+.hero h1, .page-hero h1, .detail-hero h1, .not-found h1,
+.section-head h2, .statement-band h2, .technology-band h2,
+.insights-strip h2, .final-cta h2, .about-layout h2, .contact-info h2,
+.detail-main h2, .insight-card h2, .project-card h3, .service-card h3,
+.work-row h3, .process-grid h3, .capability-card h3, .detail-aside h3 {
+  font-family: 'Caveat', cursive !important;
+  font-weight: 700 !important;
+  letter-spacing: -.025em !important;
+  line-height: 1.02 !important;
+  color: #171613 !important;
+}
+.hero h1, .page-hero h1, .detail-hero h1, .not-found h1 {
+  font-size: clamp(68px, 8.8vw, 118px) !important;
+  letter-spacing: -.035em !important;
+}
+.section-head h2, .statement-band h2, .technology-band h2,
+.insights-strip h2, .final-cta h2, .about-layout h2, .contact-info h2 {
+  font-size: clamp(48px, 6.2vw, 82px) !important;
+}
+.hero h1 em, .page-hero h1 em, .detail-hero h1 em, .not-found h1 em,
+.section-head h2 em, .statement-band h2 em, .technology-band h2 em,
+.insights-strip h2 em, .final-cta h2 em, .about-layout h2 em, .contact-info h2 em {
+  color: #ff6338 !important; text-shadow: none !important; font-style: normal !important;
+}
+.hero .hero-copy h1 em { font-family: 'Caveat',cursive !important; transform: none; }
+.intro-section .section-head h2 em { font-family: 'Patrick Hand',cursive !important; }
+.statement-band h2 em { font-family: 'Kalam',cursive !important; color: #fff !important; }
+.products-section .project-card h3 { font-family: 'Permanent Marker',cursive !important; font-size: 22px !important; }
+.services-section .section-head h2 em { font-family: 'Rock Salt',cursive !important; font-size: .66em !important; }
+.eyebrow, .hero-note, .scroll-cue, .project-category, .project-index,
+.service-number, .work-row>div:first-child>span, .footer-col b {
+  font-family: 'Inter',sans-serif !important; color: #77746c !important;
+  letter-spacing: .16em !important;
+}
+.hero .eyebrow i { background: #ff6338 !important; box-shadow: none !important; }
+.hero-copy>p, .page-hero>p, .section-head>p, .hero-note, .project-card p,
+.service-card p, .work-row p, .technology-band p, .process-grid p,
+.insight-card p, .about-layout>div:last-child p, .contact-info>p,
+.detail-main>p, .detail-hero>p, .detail-aside>p, .legal-copy p {
+  font-family: 'Inter',sans-serif !important; color: #77746c !important;
+  font-size: 15px !important; line-height: 1.8 !important;
+}
+
+/* Hero: spacious, left aligned, warm paper and a simple black/orange brand mark. */
+.hero {
+  min-height: 820px; height: auto; max-height: none;
+  background: #f2f0ea !important; padding-top: 175px; padding-bottom: 90px;
+}
+.hero-visual { opacity: 1 !important; }
+.hero-ring { border-color: rgba(24,22,18,.22) !important; }
+.ring-one { border-style: solid !important; border-color: rgba(255,99,56,.42) !important; }
+.ring-three { border-color: rgba(24,22,18,.18) !important; }
+.hero-core { border: 0 !important; border-radius: 0 !important; background: #171613 !important; box-shadow: 9px 9px 0 #ff6338 !important; }
+.hero-core span { color: #fff !important; font-family: 'Inter',sans-serif !important; }
+.hero-core small { color: #fff !important; }
+.orbit-node { border-radius: 0 !important; background: #f2f0ea !important; color: #171613 !important; border-color: rgba(24,22,18,.2) !important; box-shadow: 4px 4px 0 rgba(255,99,56,.6) !important; }
+.scroll-cue { color: #77746c !important; }
+.note-line { background: #ff6338 !important; }
+
+/* Paper sections and high-contrast orange editorial panels. */
+.section { background: transparent !important; }
+.intro-values>div, .intro-values>div+div { border-color: var(--line) !important; }
+.intro-values b { color: #171613 !important; font-family: 'Inter',sans-serif !important; }
+.intro-values p { color: #77746c !important; }
+.statement-band {
+  background: #ff6338 !important; color: #171613 !important;
+  border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+  padding: clamp(38px,6vw,78px) !important;
+}
+.statement-band .eyebrow { color: rgba(23,22,19,.66) !important; }
+.statement-band h2, .statement-band h2 em { color: #171613 !important; }
+.statement-band>p { color: rgba(23,22,19,.78) !important; }
+.statement-mark { background: #171613 !important; color: #fff !important; border: 0 !important; border-radius: 0 !important; }
+.project-card, .service-card, .capability-card, .insight-card,
+.detail-aside, .contact-form, .contact-note {
+  background: #ebe8df !important; border: 1px solid rgba(24,22,18,.16) !important;
+  border-radius: 0 !important; box-shadow: none !important;
+}
+.project-card:hover, .service-card:hover { border-color: #ff6338 !important; }
+.project-art { background: #171613 !important; border-radius: 0 !important; }
+.project-art .art-grid { opacity: .16; }
+.art-orb { border-radius: 0 !important; color: #ff6338 !important; background: #27241f !important; }
+.project-card-content { background: #ebe8df !important; }
+.project-card h3, .service-card h3, .work-row h3, .process-grid h3,
+.capability-card h3, .detail-aside h3 { color: #171613 !important; }
+.project-card p, .service-card p, .work-row p { color: #77746c !important; }
+.project-card-foot { border-color: var(--line) !important; color: #171613 !important; }
+.status { border-radius: 0 !important; }
+.status-done { color: #2d654b !important; background: #d9e8dc !important; }
+.status-progress { color: #96512e !important; background: #f6dfd2 !important; }
+.service-icon { border-radius: 0 !important; color: #171613 !important; background: #ff6338 !important; border: 0 !important; }
+.card-arrow, .section-link a, .work-row a { color: #171613 !important; }
+.card-arrow svg, .section-link svg, .work-row a svg { color: #ff6338 !important; }
+.work-row { border-color: var(--line) !important; }
+.work-row-visual, .visual-notes, .visual-savi { border-radius: 0 !important; background: #e5e1d7 !important; border-color: var(--line) !important; }
+.mini-window { border-radius: 0 !important; background: #171613 !important; }
+.mini-window b { color: #fff !important; }
+.technology-band, .insights-strip {
+  background: #e9e6dd !important; color: #171613 !important;
+  border-color: var(--line) !important;
+}
+.tech-pill { border-radius: 0 !important; background: transparent !important; color: #171613 !important; border-color: var(--line) !important; box-shadow: none !important; }
+.process-grid { border-color: var(--line) !important; }
+.process-grid>div+div { border-color: var(--line) !important; }
+.insights-mini>a { border-color: var(--line) !important; }
+.insights-mini b { color: #171613 !important; font-family: 'Inter',sans-serif !important; }
+.final-cta { background: #ff6338 !important; color: #171613 !important; }
+.final-cta h2, .final-cta h2 em, .final-cta>p { color: #171613 !important; }
+.site-footer { background: #171613 !important; border-color: #171613 !important; }
+.site-footer .wordmark { color: #fff !important; }
+.site-footer .footer-col b { color: #fff !important; }
+.site-footer .footer-col a, .site-footer .footer-col span,
+.site-footer .footer-brand-block p, .footer-bottom { color: #b8b4aa !important; }
+.footer-bottom { border-color: rgba(255,255,255,.18) !important; }
+.floating-contact { border-radius: 0 !important; background: #171613 !important; color: #fff !important; box-shadow: 5px 5px 0 #ff6338 !important; }
+
+/* Inner pages inherit the same visual language. */
+.page-hero, .detail-hero { background: #f2f0ea !important; }
+.back-link { color: #77746c !important; }
+.filter-list button, .search-box { border-radius: 0 !important; border-color: var(--line) !important; color: #55534d !important; background: transparent !important; }
+.search-box input { color: #171613 !important; }
+.filter-list button.active, .filter-list button:hover { color: #171613 !important; border-color: #ff6338 !important; background: rgba(255,99,56,.14) !important; }
+.detail-features>div { color: #4f4c45 !important; }
+.stack-list span { border-radius: 0 !important; color: #4f4c45 !important; background: transparent !important; border-color: var(--line) !important; }
+.contact-form label { color: #171613 !important; }
+.contact-form input, .contact-form textarea, .contact-form select {
+  border-radius: 0 !important; background: #f7f5ef !important; color: #171613 !important;
+  border-color: var(--line) !important;
+}
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color: #ff6338 !important; }
+.legal-copy h2 { font-family: 'Caveat',cursive !important; font-size: 32px !important; color: #171613 !important; }
+.empty-state { color: #77746c !important; }
+
+@media(max-width:760px) {
+  .site-header, .site-header.is-scrolled { height: 70px; padding-inline: 20px; }
+  .hero { min-height: 0; padding: 145px 25px 75px; }
+  .hero h1 { font-size: clamp(64px,15vw,94px) !important; line-height: .98 !important; }
+  .hero-visual { width: 310px; height: 310px; right: -100px; top: 69%; opacity: .8 !important; }
+  .hero-note { color: #77746c !important; }
+  .section { padding: 82px 0; }
+  .section-head h2, .statement-band h2, .technology-band h2, .insights-strip h2,
+  .final-cta h2, .about-layout h2, .contact-info h2 { font-size: clamp(48px,12vw,68px) !important; }
+  .statement-band { width: calc(100% - 42px); padding: 34px 25px !important; }
+  .project-card, .service-card, .capability-card, .insight-card { border-radius: 0 !important; }
+  .page-hero { padding: 135px 24px 55px; }
+  .page-hero h1, .detail-hero h1 { font-size: clamp(62px,14vw,88px) !important; }
+  .floating-contact { right: 17px; bottom: 17px; }
+}
+@media(prefers-reduced-motion:reduce){.hero-ring{animation:none!important}}
