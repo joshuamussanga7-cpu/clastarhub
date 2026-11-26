@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://clastarhub.com/</loc>
-    <lastmod>2024-05-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://clastarhub.com/</loc></url>
+  <url><loc>https://clastarhub.com/products</loc></url>
+  <url><loc>https://clastarhub.com/services</loc></url>
+  <url><loc>https://clastarhub.com/work</loc></url>
+  <url><loc>https://clastarhub.com/technology</loc></url>
+  <url><loc>https://clastarhub.com/insights</loc></url>
+  <url><loc>https://clastarhub.com/about</loc></url>
+  <url><loc>https://clastarhub.com/contact</loc></url>
+  <url><loc>https://clastarhub.com/privacy</loc></url>
+  <url><loc>https://clastarhub.com/terms</loc></url>
+  <url><loc>https://clastarhub.com/cookies</loc></url>
+  <url><loc>https://clastarhub.com/products/university-notes</loc></url>
+  <url><loc>https://clastarhub.com/products/uni-connect</loc></url>
+  <url><loc>https://clastarhub.com/products/savi</loc></url>
+  <url><loc>https://clastarhub.com/products/uniplanner</loc></url>
+  <url><loc>https://clastarhub.com/products/clastarhub</loc></url>
+  <url><loc>https://clastarhub.com/products/iq-booster</loc></url>
+  <url><loc>https://clastarhub.com/products/hoop-shot</loc></url>
+  <url><loc>https://clastarhub.com/products/stack-hop</loc></url>
+  <url><loc>https://clastarhub.com/products/mayra-tour</loc></url>
+  <url><loc>https://clastarhub.com/products/kaymex</loc></url>
+  <url><loc>https://clastarhub.com/products/kaya-homes</loc></url>
+  <url><loc>https://clastarhub.com/products/red-apple-events</loc></url>
+  <url><loc>https://clastarhub.com/products/flower-technologies</loc></url>
 </urlset>
